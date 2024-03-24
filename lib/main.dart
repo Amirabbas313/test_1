@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test_1/widget/w_textfield.dart';
-// import 'package:test_1/widget/w_text.dart';
-// import 'package:test_1/widget/w_text.dart';
+import 'package:test_1/widget/w_bottom.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,12 +19,14 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: SafeArea(child: Center(
-          child: w_Textfield(
-            style: InputDecoration(
-              hintText: 'hello'
-            ),
-          )
+        body: SafeArea(
+            child: Center(
+          child: Column(
+            children: [
+              ElevatedButton(onPressed: () {}, child: Text('data')),
+              w_Bottom(child: Text('data'), color: Colors.black)
+            ],
+          ),
         )),
       ),
     );
