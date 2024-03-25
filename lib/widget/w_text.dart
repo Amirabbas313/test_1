@@ -18,10 +18,8 @@ class w_Text extends StatefulWidget {
 class _w_TextState extends State<w_Text> {
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {
-        
-      },
+    return Container(
+      child: widget.title,
     );
   }
 }

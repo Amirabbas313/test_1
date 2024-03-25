@@ -1,11 +1,9 @@
-// import 'dart:async';
-
 import 'package:flutter/material.dart';
 
 class w_Textfield extends StatefulWidget {
 
-  final Decoration decoration = BoxDecoration(
-      borderRadius: BorderRadius.circular(20), color: Color(0xff1b3232));
+  final BoxDecoration boxDecoration = BoxDecoration(
+      borderRadius: BorderRadius.circular(20), color: Colors.grey[400]);
   final InputDecoration style;
 
   w_Textfield({
@@ -20,7 +18,15 @@ class w_Textfield extends StatefulWidget {
 class _w_TextfieldState extends State<w_Textfield> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Padding(
+      padding: const EdgeInsets.only(right: 10, left: 10),
+      child: Container(
+        decoration: widget.boxDecoration,
+        child: TextFormField(
+          decoration: widget.style,
+          
+        ),
+      ),
     );
   }
 }
